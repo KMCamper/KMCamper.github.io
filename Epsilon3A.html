@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Epsilon 3</title>
+        <meta charset="UTF-8"/>
+        <meta name="author" content="Kyle Camper">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+        <style>
+            * {
+              box-sizing: border-box;
+            }
+            
+            body {
+              margin: 0;
+              font-family: Arial;
+            }
+            
+            /* The grid: Four equal columns that floats next to each other */
+            .column {
+              float: left;
+              width: 30%;
+              padding: 1px;
+            }
+            
+            /* Style the images inside the grid */
+            .column img {
+              opacity: 0.8; 
+              cursor: pointer; 
+            }
+            
+            .column img:hover {
+              opacity: 1;
+            }
+            
+            /* Clear floats after the columns */
+            .row:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+            
+            /* The expanding image container */
+            .container {
+              position: relative;
+              display: none;
+            }
+            
+            
+            /* Closable button inside the expanded image */
+            .closebtn {
+              position: absolute;
+              top: 10px;
+              right: 15px;
+              color: red;
+              font-size: 35px;
+              cursor: pointer;
+            }
+            </style>
+    </head>
+    <body style="background-color:lightgray;">
+       <!-- <img src="https://m.media-amazon.com/images/I/518CBMpSJrL._AC_SL1200_.jpg" style="width:30%;"></div> -->
+        <h1><strong>Epsilon 3A</strong></h1>
+
+        <!-- The expanding image container -->
+  <div class="container">
+    <!-- Close the image -->
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  
+    <!-- Expanded image -->
+    <img id="expandedImg" style="width:40%">
+  
+    <!-- Image text -->
+    <div id="imgtext"></div>
+  </div>
+
+        <!-- The grid: four columns -->
+<div class="row">
+    <div class="column">
+      <img src="https://m.media-amazon.com/images/I/518CBMpSJrL._AC_SL1200_.jpg" style="width: 40%;" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="https://m.media-amazon.com/images/I/41lzxsCieXL._AC_SL1200_.jpg" style="width: 40%;" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="https://m.media-amazon.com/images/I/51kuh3KFW9L._AC_SL1200_.jpg" style="width: 40%;" onclick="myFunction(this);">
+    </div>
+  </div>
+   
+<script>
+    function myFunction(imgs) {
+      var expandImg = document.getElementById("expandedImg");
+      var imgText = document.getElementById("imgtext");
+      expandImg.src = imgs.src;
+      imgText.innerHTML = imgs.alt;
+      expandImg.parentElement.style.display = "block";
+    }
+    </script>
+    
+        <h2 style="font-size: 150%; color: green;">$200</h2>
+        <h3> In stock</h3>
+        <p style="font-size: 135%;">This Epsilon camera can record in 4k resolution, powered by poe (power over ethernet), and has a viewing angle of 170 degrees. </p>  
+        <p style="font-size: 135%;">Upgrades over the Epsilon 3 model: +20 degree viewing angle, Integrated IR night vision, Tamper-resistance design</p>
+        <p style="font-size: 135%;"> What's in the Box: One Epsilon 3A Camera with screwdriver, 3 screw anchors, 3 self-tapping screws, mounting bracket; 
+                                     power adapter (19V, 3.42A), power cord, four feet magnetic rubber, and quick start guide.</p>
+    </body>
+    <footer style="background-color: lightgrey;">
+        <p><a href="">Back to homepage</a></p> 
+        <p><a href="https://kmcamper.github.io/Epsilon3">Epsilon 3</a></p>
+        <p><a href="https://ui.com/camera-security" target="_blank"> Ubiquiti Security Suite </a></p>
+    </footer>
+</html>
